@@ -1,0 +1,10 @@
+@use '../util/' as *;
+
+.toggle{
+  &__button{
+    border-radius: 50%;
+    width: 1rem;
+    height: .5rem;
+    background-color: var(--card-hover);
+  }
+}
