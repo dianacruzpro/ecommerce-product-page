@@ -7,26 +7,28 @@ I'm gonna use this mixin because if i do any changes,
 i don't have to go and do a huge find to replace though all my styles, i can just change it in one place here in my breakpoint file.
 */
 
-//640px 1024px 1400px
+//640px 1115px 1400px
 $breakpoint-up: (
   'medium': '40em',
-  'large': '64em',
-  'xlarge': '84.5em',
+  'large': '69.6875em',
+  'xlarge': '87.5em',
   );
 
-//639px 1023px 1399px
+//639px 1114px 1399px
 $breakpoint-down: (
   'small': '39.9375em',
-  'medium': '63.9375em',
+  'medium': '69.625em',
   'large': '87.4375em',
 );
 
+/*This is to start working in mobile-first mode*/
 @mixin breakpoint($size){
   @media (min-width: map-get($breakpoint-up, $size)){
     @content;
   }
 }
 
+/*This is to start working in desktop mode*/
 @mixin breakpoint-down($size){
   @media(max-width: map-get($breakpoint-down,$size)){
     @content;

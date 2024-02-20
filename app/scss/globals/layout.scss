@@ -5,6 +5,9 @@
   max-width: 87.5rem;
   padding: 0;
   margin: 0 auto;
+  @include breakpoint(large){
+    min-width: 69.6875rem;
+  }
 }
 .container{
   min-width: 23.4375rem;
