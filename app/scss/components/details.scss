@@ -1,0 +1,50 @@
+@use '../util/' as *;
+
+.details{
+  padding: 1.5rem;
+
+  &__company{
+    font-size: .6rem;
+    color: var(--main-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+  }
+  &__title{
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin: 1.25rem 0 1.5625rem;
+    line-height: 1.2;
+  }
+  &__description{
+    font-size: .9rem;
+    color: var(--text-color);
+    line-height: 1.5rem;
+    margin-bottom: 2.1875rem;
+  }
+  &__prices{
+    @include flexbox(row, wrap, space-between, center,1rem);
+    margin-bottom: 1.5rem;
+
+    &--now{
+      @include flexbox(row,nowrap, center, center, 1rem);
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    &--before{
+      font-weight: 700;
+      color: var(--bg-color2);
+      text-decoration-line: line-through;
+    }
+    &--discount{
+      font-size: .8rem;
+      color: var(--main-color);
+      background-color: var(--card-hover);
+      padding: 0 .5rem;
+      border-radius: .5rem;
+    }
+  }
+  &__product-quantity{}
+  &__button{}
+  &__button-icon{}
+}

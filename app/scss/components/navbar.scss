@@ -2,4 +2,22 @@
 
 .navbar{
   display: none;
+  @include breakpoint(large){
+    display: block;
+  }
+  width: 28.125rem;
+  
+  &__ul{
+    @include flexbox(row, nowrap, space-between, center,1rem);
+  }
+  &__li{}
+  &__a{
+    color: var(--text-color);
+    display: block;
+    height: 7rem;
+    padding-top:3rem;
+    &:hover{
+      border-bottom: 4px solid var(--main-color);
+    }
+  }
 }

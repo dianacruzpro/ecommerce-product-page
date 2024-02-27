@@ -1,5 +1,34 @@
 @use '../util/' as *;
 
 .modal-navbar{
-  display: none;
+  @include flexbox(column, nowrap, flex-start, flex-start);
+  padding: 1.5rem;
+  background-color: var(--bg-color);
+  max-width: 15.625rem;
+  min-height: 100vh;
+  display: block;
+  
+  &__background{
+    display: none;
+    @include modal-background-color;
+  }
+  &__close{
+    width: 1rem;
+    cursor: pointer;
+  }
+  &__ul{
+    width: 100%;
+    margin-top: 3.5rem;
+  }
+  &__li{}
+  &__a{
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: .5rem 0;
+    transition: .3s ease-in-out; 
+    &:hover{
+      color: var(--title-color1);
+    }
+  }
+
 }

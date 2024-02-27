@@ -8,16 +8,13 @@
     height: 7.1875rem;
     border-bottom: 1px solid var(--bg-color2);
   }
-
-
   &__navigation{
-    width: 10.9375rem;
+    width: 11.25rem;
     height: 100%;
-    border: 1px solid red;
     transition: .3s ease-in-out;
-    @include flexbox(row, nowrap, space-between, center,.5rem);
+    @include flexbox(row, nowrap, space-between, center,1rem);
     @include breakpoint(large){
-      width: 37.5rem;
+      width: 600px;
     }
   }
   &__menu{
@@ -30,6 +27,7 @@
     }
   }
   &__logo{
+    // margin-right: 1rem;
     width: min-content;
   }
   &__cart-avatar{
@@ -40,7 +38,6 @@
       width: 7.5rem;
     }
   }
-  
   &__cart{
     position: relative;
     &--notification{

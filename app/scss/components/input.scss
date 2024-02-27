@@ -1,0 +1,14 @@
+@use '../util/' as *;
+
+.input{
+  @include flexbox(row, nowrap, space-between, center);
+  background-color: var(--bg-color3);
+  // padding: .2rem;
+  border-radius: .4rem;
+  &__minus,&__plus{
+    width: 2.5rem;
+    padding: 1rem;
+  }
+  &__number{}
+  
+}
