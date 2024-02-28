@@ -1,0 +1,42 @@
+@use '..//util/' as *;
+
+.cart-modal{
+  display: none;
+  width: 22.5rem;
+  border-radius: .5rem;
+  box-shadow: 3px 3px 10px;
+  position: absolute;
+  top: 4.6875rem;
+  right: .5rem;
+  background-color: var(--bg-color);
+  padding: 1rem;
+  &__title{
+    font-weight: 700;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--bg-color2);
+  }
+  &__checkout-container{
+
+  }
+  &__details-container{
+    margin-top:1rem; 
+    @include flexbox(row, nowrap, space-between, center);
+
+  }
+  &__img-product{
+    width: 3.5rem;
+    border-radius: 4px;
+  }
+  &__text-product{}
+  &__text-price span{
+    font-weight: 700;
+    color: var(--title-color1);
+  }
+  &__delete{
+    width: 1rem;
+  }
+  &__checkout{
+    margin: 1rem 0 .5rem;
+    @include button;
+  }
+}

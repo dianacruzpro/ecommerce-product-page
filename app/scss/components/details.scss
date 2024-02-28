@@ -45,6 +45,7 @@
     }
   }
   &__product-quantity{}
-  &__button{}
-  &__button-icon{}
+  &__button{
+   @include button;
+  }
 }
